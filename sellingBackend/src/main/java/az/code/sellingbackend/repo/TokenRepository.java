@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import az.code.sellingbackend.entity.Token;
+import az.code.sellingbackend.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-public interface TokenRepository extends JpaRepository<Token, Integer> {
+public interface TokenRepository extends JpaRepository<Token,Integer> {
 
     @Query(value = """
       select t from Token t inner join User u\s
@@ -17,4 +18,10 @@ public interface TokenRepository extends JpaRepository<Token, Integer> {
     List<Token> findAllValidTokenByUser(Integer id);
 
     Optional<Token> findByToken(String token);
+
+    Token save(Token authenticationToken);
+
+    Token findByUser(User user);
+
+//    User getUser();
 }

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -44,7 +45,16 @@ public class ProductService {
         product.setProductPrice(productDto.getProductPrice());
         productRepo.save(product);
     }
-
+public ProductDto getProductDto(Product product){
+        ProductDto productDto=new ProductDto();
+        productDto.setProductPrice(product.getProductPrice());
+        productDto.setProductName(product.getProductName());
+        productDto.setProductImage(product.getProductImage());
+        productDto.setId(product.getId());
+        productDto.setCategoryId(product.getProductCategory().getId());
+        productDto.setProductDesc(product.getProductDesc());
+        return productDto;
+}
 
     public Product getProductById(String id) {
         return productRepo.getProductsById(Integer.valueOf(id));
@@ -55,4 +65,11 @@ public class ProductService {
     }
 
 
+    public Product findById(Integer productId) throws Exception {
+       Optional<Product> optProduct= productRepo.findById(productId);
+       if(optProduct.isEmpty()){
+           throw  new Exception("product id not valid");
+       }
+      return  optProduct.get();
+    }
 }

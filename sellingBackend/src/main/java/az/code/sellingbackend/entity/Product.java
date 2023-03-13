@@ -1,5 +1,6 @@
 package az.code.sellingbackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,6 +28,7 @@ public class Product {
     private @NotNull String productImage;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "category_id")
     Category productCategory;
 

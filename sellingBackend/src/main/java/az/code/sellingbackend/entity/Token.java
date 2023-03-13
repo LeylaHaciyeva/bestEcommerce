@@ -3,6 +3,7 @@ package az.code.sellingbackend.entity;
 import az.code.sellingbackend.TokenType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
@@ -19,23 +20,24 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name="tokens")
 public class Token {
 
     @Id
     @GeneratedValue
-    public Integer id;
+    private Integer id;
 
     @Column(unique = true)
-    public String token;
+    private String token;
 
     @Enumerated(EnumType.STRING)
-    public TokenType tokenType = TokenType.BEARER;
+    private TokenType tokenType = TokenType.BEARER;
 
-    public boolean revoked;
+    private boolean revoked;
 
-    public boolean expired;
+    private boolean expired;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    public User user;
+    private User user;
 }
