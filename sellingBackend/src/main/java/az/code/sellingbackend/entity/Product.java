@@ -31,6 +31,4 @@ public class Product {
     @JsonIgnore
     @JoinColumn(name = "category_id")
     Category productCategory;
-
-
 }

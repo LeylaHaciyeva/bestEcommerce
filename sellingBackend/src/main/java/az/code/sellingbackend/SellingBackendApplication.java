@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@EntityScan({"az.code.sellingbackend.dto","az.code.sellingbackend.entity"})
 public class SellingBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(SellingBackendApplication.class, args);

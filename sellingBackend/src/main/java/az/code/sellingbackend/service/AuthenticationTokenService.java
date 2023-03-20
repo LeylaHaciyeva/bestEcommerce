@@ -4,13 +4,16 @@ import az.code.sellingbackend.entity.Token;
 import az.code.sellingbackend.entity.User;
 import az.code.sellingbackend.repo.TokenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class AuthenticationTokenService {
+public class AuthenticationTokenService  implements UserDetailsService {
     @Autowired
     TokenRepository tokenRepository;
     public void saveConfirmationToken(Token authenticationToken){
@@ -34,5 +37,10 @@ public class AuthenticationTokenService {
         if(Objects.isNull(getUser(token))){
             new Exception("token not present");
         }
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
     }
 }
