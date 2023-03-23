@@ -13,9 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Table(name = "wishlist")
 public class WishList {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id", nullable = false)
+@Id
     private Integer id;
 
    @OneToOne(targetEntity = User.class, fetch = FetchType.EAGER)
@@ -30,6 +28,7 @@ public class WishList {
 
     public WishList(User user, Product product) {
         this.product=product;
+        this.id=product.getId();
         this.user=user;
         this.createdDate=new Date();
     }

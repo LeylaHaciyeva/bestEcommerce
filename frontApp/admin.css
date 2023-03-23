@@ -1,11 +1,13 @@
 label,
 input,
-textarea {
+textarea,
+select {
     width: 100%;
 }
 
 input,
-textarea {
+textarea,
+select {
     padding: 10px;
 
 }
@@ -25,13 +27,42 @@ button:hover {
     color: black;
 }
 
+
 a {
     text-decoration: none !important;
-    color: white !important;
+    /* color: white !important; */
     padding: 5px;
 }
 
 a:hover {
     text-decoration: none !important;
-    color: rgb(189, 188, 186) !important;
+    /* color: rgb(189, 188, 186) !important; */
+}
+
+.nav-pills li {
+    border-radius: 6px;
+    padding: 10px 20px;
+
+}
+
+.nav-pills .active {
+
+    background-color: rgb(41, 41, 41);
+}
+
+.nav-pills .active .nav_link {
+    color: white;
+}
+
+.nav-pills .nav_link {
+    color: black;
+}
+
+.admin-header-menu a {
+    color: white;
+    transition: all .4s ease;
+}
+
+.admin-header-menu a:hover {
+    color: orangered;
 }

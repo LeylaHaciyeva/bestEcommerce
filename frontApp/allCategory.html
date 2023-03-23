@@ -17,36 +17,56 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container">
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./admin.html">
                     Admin Panel
                 </a>
-                <div>
+                <!-- <div>
                     <a href="">All products</a>
-                </div>
+                </div> -->
             </div>
         </nav>
     </header>
+
     <section>
-        <div class="container d-flex justify-content-center">
-            <div class="row">
-                <div class="col-lg-4">
-                    <img src="" alt="">
-                    <h1></h1>
-                    <button onclick="fetchMovies()">click</button>
-                </div>
+        <div class="container">
+            <div class="row card-row">
+
             </div>
         </div>
     </section>
 
     <script>
-       
-        let fetchMovies = () => {
+        let cardRow = document.querySelector(".card-row")
+
+        let fetchAllCategories = () => {
+            let a = ""
             fetch("http://localhost:8080/category/all")
                 .then((data) => data.json())
-                .then((info) => {
-                    console.log(info);
+                .then((categories) => {
+                    categories.map((category) => {
+                        a += `
+        <div class="col-lg-4 col-md-4 card-col mb-5 mt-5">
+        <div class="card">
+            <div class="img-div">
+                <img class="card-img-top" src='${category.imageUrl}' alt='${category.categoryName}'>
+            </div>
+            <div class="card-body text-center">
+                <div class="card-tittle">
+                ${category.categoryName}
+                    <p>
+                    ${category.description}
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        `
+                        cardRow.innerHTML = a
+                    })
                 })
         }
+        fetchAllCategories()
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

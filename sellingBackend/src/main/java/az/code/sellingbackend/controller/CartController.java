@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin
 @RestController
 @RequestMapping(value = "cart", method = {RequestMethod.DELETE, RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 public class CartController {
@@ -31,7 +31,7 @@ public class CartController {
         authenticationTokenService.authentication(token);
         User user = authenticationTokenService.getUser(token);
         CartDto cartDto= cartService.getCartItems(user);
-        return new ResponseEntity<>(cartDto,HttpStatus.CREATED);
+        return new ResponseEntity<>(cartDto,HttpStatus.OK);
     }
     @DeleteMapping("/delete/{cartItemId}")
     public ResponseEntity<HttpStatus> deleteCartItem(

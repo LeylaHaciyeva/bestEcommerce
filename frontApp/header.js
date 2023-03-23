@@ -7,12 +7,24 @@ let close = document.querySelector(".close-icon")
 
 
 button.addEventListener("click", function () {
-  navigation.style.display = "block"
+  // navigation.style.display = "block"
+  navigation.style.opacity = "1"
+  navigation.style.right = "0"
+ navigation.style.transform="translate(0,0)"
+
+
+
 })
 
 
 close.addEventListener("click", function () {
-  navigation.style.display = "none"
+  // navigation.style.display = "none"
+  navigation.style.opacity = "0"
+  navigation.style.right = "-100%"
+ navigation.style.transform="translate(0,-100%)"
+
+
+
 })
 // click=0
 // length=1
@@ -48,3 +60,55 @@ function myFunction() {
     headerBottom.style.position = "relative"
   }
 }
+
+if (localStorage.getItem("token") == null) {
+  document.querySelector(".dropdown-item_login").style.display = "block"
+  document.querySelector(".dropdown-item_logout").style.display = "none"
+  document.querySelector(".dropdown-item_admin").style.display = "none"
+  document.querySelector(".dropdown-item_signup").style.display = "block"
+  document.querySelector(".dropdown-item_login_mob").style.display = "block"
+  document.querySelector(".dropdown-item_logout_mob").style.display = "none"
+  document.querySelector(".dropdown-item_admin_mob").style.display = "none"
+  document.querySelector(".dropdown-item_signup_mob").style.display = "block"
+  document.querySelector(".fav_item").style.display = "none"
+  document.querySelector(".cart_item").style.display = "none"
+  document.querySelector(".fav_item_mob").style.display = "none"
+  document.querySelector(".cart_item_mob").style.display = "none"
+
+} else {
+  document.querySelector(".dropdown-item_login").style.display = "block"
+  document.querySelector(".dropdown-item_logout").style.display = "block"
+  document.querySelector(".dropdown-item_admin").style.display = "block"
+  document.querySelector(".dropdown-item_signup").style.display = "none"
+  document.querySelector(".dropdown-item_login_mob").style.display = "block"
+  document.querySelector(".dropdown-item_logout_mob").style.display = "none"
+  document.querySelector(".dropdown-item_admin_mob").style.display = "none"
+  document.querySelector(".dropdown-item_signup_mob").style.display = "block"
+  document.querySelector(".fav_item_mob").style.display = "grid"
+  document.querySelector(".cart_item_mob").style.display = "grid"
+}
+
+let fetchAllWishlistsForHeader = () => {
+  fetch(`http://localhost:8080/wishlist/${localStorage.getItem("token")}`)
+    .then((data) => data.json())
+    .then((wishlists) => {
+      console.log(wishlists.length);
+      document.querySelector(".wishlist_count").innerHTML = wishlists.length
+    })
+}
+fetchAllWishlistsForHeader()
+
+
+let fetchAllBasketsForHeader = () => {
+  fetch(`http://localhost:8080/cart/?token=${localStorage.getItem("token")}`)
+    .then((data) => data.json())
+    .then((baskets) => {
+      document.querySelector(".cart_count").innerHTML =baskets.cartItemDtoList.length
+    })
+}
+fetchAllBasketsForHeader()
+
+
+document.querySelector(".dropdown-item_logout").addEventListener("click",()=>{
+  localStorage.clear()
+})

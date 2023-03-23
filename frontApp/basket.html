@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="selling.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://js.stripe.com/v3/"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="container mr-auto ml-auto">
+                <div class="row">
+                    <div class="col-6 social-col">
+                        <ul class="social">
+                            <li><a href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
+                            <li><a href=""><span><i class="fab fa-twitter"></i></span></a></li>
+                            <li><a href=""><span><i class="fab fa-instagram"></i></span></a></li>
+                            <li><a href=""><span><i class="fab fa-invision"></i></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 contact-col">
+                        <ul class="contact">
+                            <li>
+                                <a href="">
+                                    <span>
+                                        <i class="fas fa-phone-alt"></i>
+                                    </span>
+                                    <span class="contact-number">(+112) 345 45 45 45</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span class="contact-mail">leila23@gmail.com</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-bottom">
+            <div class="container ml-auto mr-auto">
+                <div class="row d-flex justify-content-end align-items-center">
+                    <div class="col-6 d-flex justify-content-start align-items-center">
+                        <h1 class="d-flex justify-content-center align-items-center">
+                            <a class="logo" href="">
+                                <img style="width:50px;margin-right:10px;margin-top:-10px"
+                                    src="./images/imageslogo-removebg-preview.png" alt="">
+                                Selony
+                            </a>
+                        </h1>
+                    </div>
+
+                    <div class="col-6 d-flex justify-content-end align-items-center">
+                        <ul class="menu d-none d-lg-block">
+                            <li><a class="active" href="">Home</a></li>
+                            <li><a href="./product.html">Products</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li class="account">Account
+                                <i class="fas fa-caret-down"></i>
+                                <ul class="sub_menu">
+                                    <li><a href="">Log in</a></li>
+                                    <li><a href="">Sign up</a></li>
+                                    <li><a href="">Log out</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">
+                                    <i class=" fas fa-regular fa-heart"></i>
+                                </a></li>
+                            <li><a href="">
+                                    <i class="fas fa-solid fa-shopping-cart"></i>
+                                </a></li>
+                        </ul>
+                        <button class="menu-button"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <ul class="navigation">
+            <li class="close-icon"><span><i class="fas fa-times fa-2x"></i></span></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Log in</a></li>
+            <li><a href="">Sign up</a></li>
+            <li><a href="">Log out</a></li>
+            <li><a href="">Favourite</a></li>
+            <li><a href="">Basket</a></li>
+        </ul>
+    </header>
+
+  
+
+    <section>
+        <div class="container text-center">
+            <div class="row ">
+                <div class="col-12 ml-auto mr-auto">
+                    <div class="products-text">
+                        <h1>Basket</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row card-row">
+                
+            </div>
+            <div class="d-flex justify-content-end">
+                <div>
+            <span class="total">Total: </span>
+            <button class="order_btn">Order</button>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script src="./header.js"></script>
+    <script src="basket.js"></script>
+    <!-- <script src="selling.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

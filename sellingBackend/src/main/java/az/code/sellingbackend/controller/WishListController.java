@@ -33,11 +33,19 @@ public class WishListController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
     @GetMapping("/{token}")
-
     public ResponseEntity<List<ProductDto>> getWishList(@PathVariable("token") String token) throws Exception {
         authenticationTokenService.authentication(token);
         User user = authenticationTokenService.getUser(token);
        List<ProductDto> productDtos= wishListService.getWishListForUser(user);
         return new ResponseEntity<>(productDtos,HttpStatus.OK);
+    }
+    @DeleteMapping("/delete/{wishlistItemId}")
+    public ResponseEntity<HttpStatus> deleteCartItem(
+            @PathVariable("wishlistItemId") Integer itemId,
+            @RequestParam("token") String token) throws Exception {
+        authenticationTokenService.authentication(token);
+        User user = authenticationTokenService.getUser(token);
+        wishListService.deleteWishlistItem(itemId,user);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

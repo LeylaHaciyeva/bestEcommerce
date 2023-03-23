@@ -9,8 +9,12 @@
     padding-top: 20px;
     z-index: 1;
 }
+
 .logo:hover{
     color: #000;
+}
+.dropdown-toggle:hover{
+    color: orangered !important;
 }
 a{
     text-decoration: none !important;
@@ -104,6 +108,11 @@ h1 .logo {
     color: orangered;
     transition: color .4s;
 }
+.menu li a:hover .wishlist_count,.menu li a:hover .cart_count{
+    color: orangered;
+    transition: color .4s;
+
+}
 .menu-button{
     border: none;
     outline: none;
@@ -115,13 +124,18 @@ h1 .logo {
     font-size: 20px;
 }
 .navigation{
-    position: fixed;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transform: translate(0,-100%);
     top: 0;
-    display: none;
-    right: 0;
+    /* display: none; */
+    right: -100%;
     background-color: white;
     padding: 50px;
     z-index: 20;
+    opacity: 0;
+    transition: all .4s ease;
 }
 .navigation li {
     list-style: none;
@@ -153,6 +167,22 @@ h1 .logo {
     position: absolute;
     z-index: 9999999;
     background: white;
+}
+.fav_item,.cart_item{
+    position: relative;
+}
+.wishlist_count,.cart_count{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 30px;
+    height: 30px; */
+    /* background-color: #000; */
+    color: black;
+    border-radius: 50%;
+    top: -10px;
+    right: -15px;
 }
 /* header-bottom menu hissesi */
 
@@ -258,14 +288,17 @@ h1 .logo {
 
 
 /* section3 */
+.card-col:hover{
+    cursor: pointer;
+}
 .card{
-    z-index:-1;
+    /* z-index:-1; */
     margin-top: 50px;
     margin-bottom: 50px;
 }
 .card-body{
     overflow: hidden;
-    height: 200px;
+    /* height: 200px; */
 }
 .card-body .card-tittle{
     text-decoration: none;
@@ -341,7 +374,7 @@ h1 .logo {
     background-color: white;
     transition: all .4s ease;
 }
-.card-buttons .view-button{
+.card-buttons .fav-button{
     text-decoration: none;
     border: 2px solid black;
     padding:5px 15px;
@@ -350,7 +383,7 @@ h1 .logo {
     font-weight: 700;
     color: black;
 }
-.card-buttons .view-button:hover{
+.card-buttons .fav-button:hover{
     color: white;
     background-color: black;
     transition: all .4s ease;

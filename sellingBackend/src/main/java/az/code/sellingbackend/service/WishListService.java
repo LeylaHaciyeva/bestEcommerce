@@ -1,6 +1,7 @@
 package az.code.sellingbackend.service;
 
 import az.code.sellingbackend.dto.ProductDto;
+import az.code.sellingbackend.entity.Cart;
 import az.code.sellingbackend.entity.User;
 import az.code.sellingbackend.entity.WishList;
 import az.code.sellingbackend.repo.WishListRepo;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class WishListService {
@@ -27,5 +29,18 @@ ProductService productService;
             products.add(productService.getProductDto(wishlist.getProduct()));
         }
         return products;
+    }
+
+    public void deleteWishlistItem(Integer itemId, User user) throws Exception {
+        Optional<WishList> optionalWishList= Optional.of(wishListRepo.getById(itemId));
+
+        if(optionalWishList.isEmpty()){
+            throw  new Exception("invalid id");
+        }
+        WishList wishListItem =optionalWishList.get();
+        if(optionalWishList.get().getUser() !=user){
+            throw new Exception("wishlist item does not belong to user");
+        }
+        wishListRepo.delete(wishListItem);
     }
 }

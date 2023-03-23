@@ -18,7 +18,7 @@
         <div class="header-top">
             <div class="container mr-auto ml-auto">
                 <div class="row">
-                    <div class="col-6 social-col">
+                    <div class="col-4 social-col">
                         <ul class="social">
                             <li><a href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
                             <li><a href=""><span><i class="fab fa-twitter"></i></span></a></li>
@@ -26,7 +26,7 @@
                             <li><a href=""><span><i class="fab fa-invision"></i></span></a></li>
                         </ul>
                     </div>
-                    <div class="col-6 contact-col">
+                    <div class="col-8 contact-col">
                         <ul class="contact">
                             <li>
                                 <a href="">
@@ -56,7 +56,7 @@
                 <div class="row d-flex justify-content-end align-items-center">
                     <div class="col-6 d-flex justify-content-start align-items-center">
                         <h1 class="d-flex justify-content-center align-items-center">
-                            <a class="logo" href="">
+                            <a class="logo" href="./home.html">
                                 <img style="width:50px;margin-right:10px;margin-top:-10px"
                                     src="./images/imageslogo-removebg-preview.png" alt="">
                                 Selony
@@ -66,23 +66,35 @@
 
                     <div class="col-6 d-flex justify-content-end align-items-center">
                         <ul class="menu d-none d-lg-block">
-                            <li><a class="active" href="">Home</a></li>
+                            <li><a class="active" href="./home.html">Home</a></li>
                             <li><a href="./product.html">Products</a></li>
-                            <li><a href="">About Us</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li class="account">Account
-                                <i class="fas fa-caret-down"></i>
-                                <ul class="sub_menu">
-                                    <li><a href="">Log in</a></li>
-                                    <li><a href="">Sign up</a></li>
-                                    <li><a href="">Log out</a></li>
-                                </ul>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="dropdown">
+                                <div style="margin-top:-5px;" class="btn dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Account
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item dropdown-item_login" href="./signin.html">Log in</a>
+                                    <a class="dropdown-item dropdown-item_logout" href="">Log out</a>
+                                    <a class="dropdown-item dropdown-item_signup" href="./signup.html">Sign up</a>
+                                    <a class="dropdown-item dropdown-item_admin" href="./admin.html">Admin</a>
+                                </div>
                             </li>
-                            <li><a href="">
+
+                            <li class="fav_item"><a href="./wishlist.html">
                                     <i class=" fas fa-regular fa-heart"></i>
+                                    <span class="wishlist_count">
+
+                                    </span>
                                 </a></li>
-                            <li><a href="">
+                            <li class="cart_item"><a href="basket.html">
                                     <i class="fas fa-solid fa-shopping-cart"></i>
+                                    <span class="cart_count">
+
+                                    </span>
                                 </a></li>
                         </ul>
                         <button class="menu-button"><i class="fas fa-bars"></i></button>
@@ -93,15 +105,16 @@
         </div>
         <ul class="navigation">
             <li class="close-icon"><span><i class="fas fa-times fa-2x"></i></span></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Products</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Log in</a></li>
-            <li><a href="">Sign up</a></li>
-            <li><a href="">Log out</a></li>
-            <li><a href="">Favourite</a></li>
-            <li><a href="">Basket</a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li class="dropdown-item_login_mob"><a href="./signin.html">Log in</a></li>
+            <li class="dropdown-item_signup_mob"><a href="./signup.html">Sign up</a></li>
+            <li class="dropdown-item_logout_mob"><a href="">Log out</a></li>
+            <li class="fav_item_mob"><a href="./wishlist.html">Favourite</a></li>
+            <li class="cart_item_mob"><a href="./basket.html">Basket</a></li>
+            <li class="dropdown-item_admin_mob"><a href="./admin.html"></a>Admin</li>
         </ul>
     </header>
     <section>
@@ -113,7 +126,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo
                             cupiditate facere deleniti fuga officia.</p>
                         <div class="selling-buttons">
-                            <a href="" class="shop-button">Shop now</a>
+                            <a href="./product.html" class="shop-button">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -141,294 +154,7 @@
     <section>
         <div class="container">
             <div class="row card-row">
-                <!-- <div class="col-lg-4 col-md-4 card-col">
-                    <div class="card">
-                        <div class="img-div">
-                            <img class="card-img-top" src="./images/card1.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="card-tittle">
-                                Wild West Hoodie111
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id nihil quos eum eos
-                                    atque sint laudantium alias dolorum, accusamus, optio est. Ratione a nulla
-                                    perferendis hic, quae nobis perspiciatis libero dolor iusto maxime adipisci corrupti
-                                    doloribus, exercitationem laudantium maiores laboriosam nam! Doloribus, commodi ipsa
-                                    hic optio asperiores minima minus eos iste perferendis voluptas dignissimos
-                                    architecto consectetur consequuntur nemo eum sapiente debitis rem sed. Atque
-                                    officiis laborum non aliquam exercitationem fugit laudantium voluptatum modi tenetur
-                                    sed, iste deleniti corporis ut eligendi similique adipisci esse incidunt, nulla
-                                    magnam assumenda tempore doloribus, unde minus facere. Nostrum nulla ducimus
-                                    inventore saepe, perspiciatis quae rerum voluptatem esse, aliquid a eligendi
-                                    aspernatur ipsa dolor voluptatum. Quisquam inventore molestiae earum quia ipsum,
-                                    adipisci doloribus molestias. Nobis eum saepe deleniti quas dolor ex perspiciatis
-                                    minima consequatur voluptate. Molestiae at exercitationem dolores, atque laboriosam
-                                    itaque. Optio quod, non magni deserunt voluptatum dignissimos voluptas reiciendis
-                                    doloremque, iste perferendis cupiditate laudantium commodi fugit eos consectetur a
-                                    ipsum nulla? Alias molestias numquam culpa dolores repellendus? Quo, praesentium
-                                    aliquid reiciendis perferendis ea, placeat porro incidunt culpa obcaecati saepe
-                                    doloribus pariatur in tempore molestias suscipit architecto non molestiae! Officia
-                                    at aspernatur, explicabo quas minus, suscipit, voluptatem repellat libero
-                                    dignissimos sit vitae accusamus ad? Fugit commodi laborum magnam corrupti harum
-                                    autem minima error in vero, facere doloremque quas modi, velit cumque necessitatibus
-                                    ipsum dignissimos, voluptates perspiciatis sunt laudantium temporibus dolore sit.
-                                    Accusamus eius, veritatis maiores illum ut nulla qui, ex sapiente autem dicta,
-                                    minima eveniet sed itaque ducimus assumenda porro aperiam esse culpa. Dicta, minus.
-                                    Veniam iusto, atque vel aspernatur perspiciatis est iste harum asperiores animi ut
-                                    natus! Reiciendis itaque error, in, rem sequi cupiditate dolor tenetur eos quasi
-                                    quod eum doloribus pariatur iusto. Recusandae dolor fugit, iusto eaque dolorum odio
-                                    mollitia architecto illo eum repellat animi modi sit sint vel non exercitationem
-                                    tempora. dolorum? Minima, dolores voluptatibus?
-                                </p>
-                                <div class="card-buttons">
-                                    <button class="card-button">Add to Favourite</button>
-                                    <button class="view-button"><a href="">View details</a></button>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 card-col">
-                    <div class="card">
-                        <div class="img-div">
-                            <img class="card-img-top" src="./images/card1.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="card-tittle">
-                                Wild West Hoodie111
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id nihil quos eum eos
-                                    atque sint laudantium alias dolorum, accusamus, optio est. Ratione a nulla
-                                    perferendis hic, quae nobis perspiciatis libero dolor iusto maxime adipisci corrupti
-                                    doloribus, exercitationem laudantium maiores laboriosam nam! Doloribus, commodi ipsa
-                                    hic optio asperiores minima minus eos iste perferendis voluptas dignissimos
-                                    architecto consectetur consequuntur nemo eum sapiente debitis rem sed. Atque
-                                    officiis laborum non aliquam exercitationem fugit laudantium voluptatum modi tenetur
-                                    sed, iste deleniti corporis ut eligendi similique adipisci esse incidunt, nulla
-                                    magnam assumenda tempore doloribus, unde minus facere. Nostrum nulla ducimus
-                                    inventore saepe, perspiciatis quae rerum voluptatem esse, aliquid a eligendi
-                                    aspernatur ipsa dolor voluptatum. Quisquam inventore molestiae earum quia ipsum,
-                                    adipisci doloribus molestias. Nobis eum saepe deleniti quas dolor ex perspiciatis
-                                    minima consequatur voluptate. Molestiae at exercitationem dolores, atque laboriosam
-                                    itaque. Optio quod, non magni deserunt voluptatum dignissimos voluptas reiciendis
-                                    doloremque, iste perferendis cupiditate laudantium commodi fugit eos consectetur a
-                                    ipsum nulla? Alias molestias numquam culpa dolores repellendus? Quo, praesentium
-                                    aliquid reiciendis perferendis ea, placeat porro incidunt culpa obcaecati saepe
-                                    doloribus pariatur in tempore molestias suscipit architecto non molestiae! Officia
-                                    at aspernatur, explicabo quas minus, suscipit, voluptatem repellat libero
-                                    dignissimos sit vitae accusamus ad? Fugit commodi laborum magnam corrupti harum
-                                    autem minima error in vero, facere doloremque quas modi, velit cumque necessitatibus
-                                    ipsum dignissimos, voluptates perspiciatis sunt laudantium temporibus dolore sit.
-                                    Accusamus eius, veritatis maiores illum ut nulla qui, ex sapiente autem dicta,
-                                    minima eveniet sed itaque ducimus assumenda porro aperiam esse culpa. Dicta, minus.
-                                    Veniam iusto, atque vel aspernatur perspiciatis est iste harum asperiores animi ut
-                                    natus! Reiciendis itaque error, in, rem sequi cupiditate dolor tenetur eos quasi
-                                    quod eum doloribus pariatur iusto. Recusandae dolor fugit, iusto eaque dolorum odio
-                                    mollitia architecto illo eum repellat animi modi sit sint vel non exercitationem
-                                    tempora. dolorum? Minima, dolores voluptatibus?
-                                </p>
-                                <div class="card-buttons">
-                                    <button class="card-button">Add to Favourite</button>
-                                    <button class="view-button"><a href="">View details</a></button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 card-col">
-                    <div class="card">
-                        <div class="img-div">
-                            <img class="card-img-top" src="./images/card1.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="card-tittle">
-                                Wild West Hoodie111
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id nihil quos eum eos
-                                    atque sint laudantium alias dolorum, accusamus, optio est. Ratione a nulla
-                                    perferendis hic, quae nobis perspiciatis libero dolor iusto maxime adipisci corrupti
-                                    doloribus, exercitationem laudantium maiores laboriosam nam! Doloribus, commodi ipsa
-                                    hic optio asperiores minima minus eos iste perferendis voluptas dignissimos
-                                    architecto consectetur consequuntur nemo eum sapiente debitis rem sed. Atque
-                                    officiis laborum non aliquam exercitationem fugit laudantium voluptatum modi tenetur
-                                    sed, iste deleniti corporis ut eligendi similique adipisci esse incidunt, nulla
-                                    magnam assumenda tempore doloribus, unde minus facere. Nostrum nulla ducimus
-                                    inventore saepe, perspiciatis quae rerum voluptatem esse, aliquid a eligendi
-                                    aspernatur ipsa dolor voluptatum. Quisquam inventore molestiae earum quia ipsum,
-                                    adipisci doloribus molestias. Nobis eum saepe deleniti quas dolor ex perspiciatis
-                                    minima consequatur voluptate. Molestiae at exercitationem dolores, atque laboriosam
-                                    itaque. Optio quod, non magni deserunt voluptatum dignissimos voluptas reiciendis
-                                    doloremque, iste perferendis cupiditate laudantium commodi fugit eos consectetur a
-                                    ipsum nulla? Alias molestias numquam culpa dolores repellendus? Quo, praesentium
-                                    aliquid reiciendis perferendis ea, placeat porro incidunt culpa obcaecati saepe
-                                    doloribus pariatur in tempore molestias suscipit architecto non molestiae! Officia
-                                    at aspernatur, explicabo quas minus, suscipit, voluptatem repellat libero
-                                    dignissimos sit vitae accusamus ad? Fugit commodi laborum magnam corrupti harum
-                                    autem minima error in vero, facere doloremque quas modi, velit cumque necessitatibus
-                                    ipsum dignissimos, voluptates perspiciatis sunt laudantium temporibus dolore sit.
-                                    Accusamus eius, veritatis maiores illum ut nulla qui, ex sapiente autem dicta,
-                                    minima eveniet sed itaque ducimus assumenda porro aperiam esse culpa. Dicta, minus.
-                                    Veniam iusto, atque vel aspernatur perspiciatis est iste harum asperiores animi ut
-                                    natus! Reiciendis itaque error, in, rem sequi cupiditate dolor tenetur eos quasi
-                                    quod eum doloribus pariatur iusto. Recusandae dolor fugit, iusto eaque dolorum odio
-                                    mollitia architecto illo eum repellat animi modi sit sint vel non exercitationem
-                                    tempora. dolorum? Minima, dolores voluptatibus?
-                                </p>
-                                <div class="card-buttons">
-                                    <button class="card-button">Add to Favourite</button>
-                                    <button class="view-button"><a href="">View details</a></button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 card-col">
-                    <div class="card">
-                        <div class="img-div">
-                            <img class="card-img-top" src="./images/card1.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="card-tittle">
-                                Wild West Hoodie111
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id nihil quos eum eos
-                                    atque sint laudantium alias dolorum, accusamus, optio est. Ratione a nulla
-                                    perferendis hic, quae nobis perspiciatis libero dolor iusto maxime adipisci corrupti
-                                    doloribus, exercitationem laudantium maiores laboriosam nam! Doloribus, commodi ipsa
-                                    hic optio asperiores minima minus eos iste perferendis voluptas dignissimos
-                                    architecto consectetur consequuntur nemo eum sapiente debitis rem sed. Atque
-                                    officiis laborum non aliquam exercitationem fugit laudantium voluptatum modi tenetur
-                                    sed, iste deleniti corporis ut eligendi similique adipisci esse incidunt, nulla
-                                    magnam assumenda tempore doloribus, unde minus facere. Nostrum nulla ducimus
-                                    inventore saepe, perspiciatis quae rerum voluptatem esse, aliquid a eligendi
-                                    aspernatur ipsa dolor voluptatum. Quisquam inventore molestiae earum quia ipsum,
-                                    adipisci doloribus molestias. Nobis eum saepe deleniti quas dolor ex perspiciatis
-                                    minima consequatur voluptate. Molestiae at exercitationem dolores, atque laboriosam
-                                    itaque. Optio quod, non magni deserunt voluptatum dignissimos voluptas reiciendis
-                                    doloremque, iste perferendis cupiditate laudantium commodi fugit eos consectetur a
-                                    ipsum nulla? Alias molestias numquam culpa dolores repellendus? Quo, praesentium
-                                    aliquid reiciendis perferendis ea, placeat porro incidunt culpa obcaecati saepe
-                                    doloribus pariatur in tempore molestias suscipit architecto non molestiae! Officia
-                                    at aspernatur, explicabo quas minus, suscipit, voluptatem repellat libero
-                                    dignissimos sit vitae accusamus ad? Fugit commodi laborum magnam corrupti harum
-                                    autem minima error in vero, facere doloremque quas modi, velit cumque necessitatibus
-                                    ipsum dignissimos, voluptates perspiciatis sunt laudantium temporibus dolore sit.
-                                    Accusamus eius, veritatis maiores illum ut nulla qui, ex sapiente autem dicta,
-                                    minima eveniet sed itaque ducimus assumenda porro aperiam esse culpa. Dicta, minus.
-                                    Veniam iusto, atque vel aspernatur perspiciatis est iste harum asperiores animi ut
-                                    natus! Reiciendis itaque error, in, rem sequi cupiditate dolor tenetur eos quasi
-                                    quod eum doloribus pariatur iusto. Recusandae dolor fugit, iusto eaque dolorum odio
-                                    mollitia architecto illo eum repellat animi modi sit sint vel non exercitationem
-                                    tempora. dolorum? Minima, dolores voluptatibus?
-                                </p>
-                                <div class="card-buttons">
-                                    <button class="card-button">Add to Favourite</button>
-                                    <button class="view-button"><a href="">View details</a></button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 card-col">
-                    <div class="card">
-                        <div class="img-div">
-                            <img class="card-img-top" src="./images/card1.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="card-tittle">
-                                Wild West Hoodie111
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id nihil quos eum eos
-                                    atque sint laudantium alias dolorum, accusamus, optio est. Ratione a nulla
-                                    perferendis hic, quae nobis perspiciatis libero dolor iusto maxime adipisci corrupti
-                                    doloribus, exercitationem laudantium maiores laboriosam nam! Doloribus, commodi ipsa
-                                    hic optio asperiores minima minus eos iste perferendis voluptas dignissimos
-                                    architecto consectetur consequuntur nemo eum sapiente debitis rem sed. Atque
-                                    officiis laborum non aliquam exercitationem fugit laudantium voluptatum modi tenetur
-                                    sed, iste deleniti corporis ut eligendi similique adipisci esse incidunt, nulla
-                                    magnam assumenda tempore doloribus, unde minus facere. Nostrum nulla ducimus
-                                    inventore saepe, perspiciatis quae rerum voluptatem esse, aliquid a eligendi
-                                    aspernatur ipsa dolor voluptatum. Quisquam inventore molestiae earum quia ipsum,
-                                    adipisci doloribus molestias. Nobis eum saepe deleniti quas dolor ex perspiciatis
-                                    minima consequatur voluptate. Molestiae at exercitationem dolores, atque laboriosam
-                                    itaque. Optio quod, non magni deserunt voluptatum dignissimos voluptas reiciendis
-                                    doloremque, iste perferendis cupiditate laudantium commodi fugit eos consectetur a
-                                    ipsum nulla? Alias molestias numquam culpa dolores repellendus? Quo, praesentium
-                                    aliquid reiciendis perferendis ea, placeat porro incidunt culpa obcaecati saepe
-                                    doloribus pariatur in tempore molestias suscipit architecto non molestiae! Officia
-                                    at aspernatur, explicabo quas minus, suscipit, voluptatem repellat libero
-                                    dignissimos sit vitae accusamus ad? Fugit commodi laborum magnam corrupti harum
-                                    autem minima error in vero, facere doloremque quas modi, velit cumque necessitatibus
-                                    ipsum dignissimos, voluptates perspiciatis sunt laudantium temporibus dolore sit.
-                                    Accusamus eius, veritatis maiores illum ut nulla qui, ex sapiente autem dicta,
-                                    minima eveniet sed itaque ducimus assumenda porro aperiam esse culpa. Dicta, minus.
-                                    Veniam iusto, atque vel aspernatur perspiciatis est iste harum asperiores animi ut
-                                    natus! Reiciendis itaque error, in, rem sequi cupiditate dolor tenetur eos quasi
-                                    quod eum doloribus pariatur iusto. Recusandae dolor fugit, iusto eaque dolorum odio
-                                    mollitia architecto illo eum repellat animi modi sit sint vel non exercitationem
-                                    tempora. dolorum? Minima, dolores voluptatibus?
-                                </p>
-                                <div class="card-buttons">
-                                    <button class="card-button">Add to Favourite</button>
-                                    <button class="view-button"><a href="">View details</a></button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 card-col">
-                    <div class="card">
-                        <div class="img-div">
-                            <img class="card-img-top" src="./images/card1.jpg" alt="">
-                        </div>
-                        <div class="card-body text-center">
-                            <div class="card-tittle">
-                                Wild West Hoodie111
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id nihil quos eum eos
-                                    atque sint laudantium alias dolorum, accusamus, optio est. Ratione a nulla
-                                    perferendis hic, quae nobis perspiciatis libero dolor iusto maxime adipisci corrupti
-                                    doloribus, exercitationem laudantium maiores laboriosam nam! Doloribus, commodi ipsa
-                                    hic optio asperiores minima minus eos iste perferendis voluptas dignissimos
-                                    architecto consectetur consequuntur nemo eum sapiente debitis rem sed. Atque
-                                    officiis laborum non aliquam exercitationem fugit laudantium voluptatum modi tenetur
-                                    sed, iste deleniti corporis ut eligendi similique adipisci esse incidunt, nulla
-                                    magnam assumenda tempore doloribus, unde minus facere. Nostrum nulla ducimus
-                                    inventore saepe, perspiciatis quae rerum voluptatem esse, aliquid a eligendi
-                                    aspernatur ipsa dolor voluptatum. Quisquam inventore molestiae earum quia ipsum,
-                                    adipisci doloribus molestias. Nobis eum saepe deleniti quas dolor ex perspiciatis
-                                    minima consequatur voluptate. Molestiae at exercitationem dolores, atque laboriosam
-                                    itaque. Optio quod, non magni deserunt voluptatum dignissimos voluptas reiciendis
-                                    doloremque, iste perferendis cupiditate laudantium commodi fugit eos consectetur a
-                                    ipsum nulla? Alias molestias numquam culpa dolores repellendus? Quo, praesentium
-                                    aliquid reiciendis perferendis ea, placeat porro incidunt culpa obcaecati saepe
-                                    doloribus pariatur in tempore molestias suscipit architecto non molestiae! Officia
-                                    at aspernatur, explicabo quas minus, suscipit, voluptatem repellat libero
-                                    dignissimos sit vitae accusamus ad? Fugit commodi laborum magnam corrupti harum
-                                    autem minima error in vero, facere doloremque quas modi, velit cumque necessitatibus
-                                    ipsum dignissimos, voluptates perspiciatis sunt laudantium temporibus dolore sit.
-                                    Accusamus eius, veritatis maiores illum ut nulla qui, ex sapiente autem dicta,
-                                    minima eveniet sed itaque ducimus assumenda porro aperiam esse culpa. Dicta, minus.
-                                    Veniam iusto, atque vel aspernatur perspiciatis est iste harum asperiores animi ut
-                                    natus! Reiciendis itaque error, in, rem sequi cupiditate dolor tenetur eos quasi
-                                    quod eum doloribus pariatur iusto. Recusandae dolor fugit, iusto eaque dolorum odio
-                                    mollitia architecto illo eum repellat animi modi sit sint vel non exercitationem
-                                    tempora. dolorum? Minima, dolores voluptatibus?
-                                </p>
-                                <div class="card-buttons">
-                                    <button class="card-button">Add to Favourite</button>
-                                    <button class="view-button"><a href="">View details</a></button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -730,7 +456,7 @@
             </div>
         </div>
     </section>
-    <section class="section12">
+    <!-- <section class="section12">
         <div class="container">
             <div class="row">
                 <div class="col-12 blog">
@@ -784,7 +510,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="section13 pb-5 pt-5">
         <div class="container">
             <div class="row">
@@ -866,14 +592,13 @@
             </div>
             <div class="row text-center pb-5 pt-5">
                 <div class="col-lg-12">
-                    <p class="copy">Copyright ©2023 <i
-                            class="fas fa-heart"></i> by Leila</p>
+                    <p class="copy">Copyright ©2023 <i class="fas fa-heart"></i> by Leila</p>
                 </div>
             </div>
         </div>
     </section>
 
-<script src="./header.js"></script>
+    <script src="./header.js"></script>
     <script src="product.js"></script>
     <script src="selling.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
