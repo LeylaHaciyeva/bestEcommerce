@@ -92,7 +92,7 @@ let fetchAllWishlistsForHeader = () => {
   fetch(`http://localhost:8080/wishlist/${localStorage.getItem("token")}`)
     .then((data) => data.json())
     .then((wishlists) => {
-      console.log(wishlists.length);
+      // console.log(wishlists.length);
       document.querySelector(".wishlist_count").innerHTML = wishlists.length
     })
 }

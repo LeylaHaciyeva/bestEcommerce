@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="admin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -67,7 +67,8 @@
                             <div class="form-group ">
                                 <label for="productDesc" class=" col-form-label">Product desc</label>
                                 <div class="">
-                                    <textarea required cols="33" rows="5" name="productDesc" id="productDesc"></textarea>
+                                    <textarea required cols="33" rows="5" name="productDesc"
+                                        id="productDesc"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -75,7 +76,7 @@
                                 <select name="categorySelected" id="categorySelected">
                                 </select>
                             </div>
-                          
+
                             <button>Add product</button>
                         </form>
                     </div>
@@ -92,7 +93,7 @@
                                     <input required name="name" type="text" class="" id="categoryName">
                                 </div>
                             </div>
-            
+
                             <div class="form-group ">
                                 <label for="categoryDesc" class=" col-form-label">Category desc</label>
                                 <div class="">
@@ -110,24 +111,25 @@
                     </div>
                 </section>
             </div>
-            
+
         </div>
     </div>
 
 
 
-   
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
-let categorySelected=document.querySelector("#categorySelected")
-let optionCat
-let fetchAllCategories = () => {
+        let categorySelected = document.querySelector("#categorySelected")
+        let optionCat
+        let fetchAllCategories = () => {
             fetch("http://localhost:8080/category/all")
                 .then((data) => data.json())
                 .then((categories) => {
-                    categories.map((category)=>{
-                        optionCat=document.createElement("option")
-                        optionCat.value=category.id
-                        optionCat.innerText=category.categoryName
+                    categories.map((category) => {
+                        optionCat = document.createElement("option")
+                        optionCat.value = category.id
+                        optionCat.innerText = category.categoryName
                         categorySelected.append(optionCat)
                     })
                 })
@@ -141,7 +143,6 @@ let fetchAllCategories = () => {
             let productImage = e.target.productImage.value
             let productDesc = e.target.productDesc.value
             let productPrice = e.target.productPrice.value
-            console.log(+categorySelected.value);
             let data = await fetch("http://localhost:8080/api/createProduct", {
                 method: "POST",
                 mode: "cors",
@@ -152,11 +153,22 @@ let fetchAllCategories = () => {
                     productName: productName,
                     productDesc: productDesc,
                     productImage: productImage,
-                    productPrice:productPrice,
-                    categoryId:1
+                    productPrice: productPrice,
+                    categoryId: 1
                 }),
             })
-            console.log(data);
+            if (data.status == 201) {
+                Swal.fire({
+                    title: '<strong>Product created</strong>',
+                    icon: 'info',
+                })
+            }
+            else{
+                Swal.fire({
+                    title: '<strong>Product not created</strong>',
+                    icon: 'info',
+                })
+            }
         })
 
 
@@ -176,12 +188,24 @@ let fetchAllCategories = () => {
                     categoryName: name,
                     description: desc,
                     imageUrl: url
-                    
+
                 }),
             })
-            console.log(data);
+            if (data.status == 200) {
+                Swal.fire({
+                    title: '<strong>Category created</strong>',
+                    icon: 'info',
+                })
+            }
+            else{
+                Swal.fire({
+                    title: '<strong>Category not created</strong>',
+                    icon: 'info',
+                })
+            }
         })
     </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

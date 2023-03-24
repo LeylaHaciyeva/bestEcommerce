@@ -38,5 +38,4 @@ public class ContactController {
         contactService.post(contact);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-
 }

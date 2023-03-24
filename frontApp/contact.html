@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About</title>
+        <title>Contact</title>
         <link rel="stylesheet" href="selling.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -11,11 +11,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     </head>
 <body>
+    
     <header>
         <div class="header-top">
             <div class="container mr-auto ml-auto">
                 <div class="row">
-                    <div class="col-6 social-col">
+                    <div class="col-4 social-col">
                         <ul class="social">
                             <li><a href=""><span><i class="fab fa-facebook-f"></i></span></a></li>
                             <li><a href=""><span><i class="fab fa-twitter"></i></span></a></li>
@@ -23,7 +24,7 @@
                             <li><a href=""><span><i class="fab fa-invision"></i></span></a></li>
                         </ul>
                     </div>
-                    <div class="col-6 contact-col">
+                    <div class="col-8 contact-col">
                         <ul class="contact">
                             <li>
                                 <a href="">
@@ -53,7 +54,7 @@
                 <div class="row d-flex justify-content-end align-items-center">
                     <div class="col-6 d-flex justify-content-start align-items-center">
                         <h1 class="d-flex justify-content-center align-items-center">
-                            <a class="logo" href="">
+                            <a class="logo" href="./home.html">
                                 <img style="width:50px;margin-right:10px;margin-top:-10px"
                                     src="./images/imageslogo-removebg-preview.png" alt="">
                                 Selony
@@ -63,23 +64,35 @@
 
                     <div class="col-6 d-flex justify-content-end align-items-center">
                         <ul class="menu d-none d-lg-block">
-                            <li><a class="active" href="">Home</a></li>
+                            <li><a class="active" href="./home.html">Home</a></li>
                             <li><a href="./product.html">Products</a></li>
-                            <li><a href="">About Us</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li class="account">Account
-                                <i class="fas fa-caret-down"></i>
-                                <ul class="sub_menu">
-                                    <li><a href="">Log in</a></li>
-                                    <li><a href="">Sign up</a></li>
-                                    <li><a href="">Log out</a></li>
-                                </ul>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="dropdown">
+                                <div style="margin-top:-5px;" class="btn dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Account
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item dropdown-item_login" href="./signin.html">Log in</a>
+                                    <a class="dropdown-item dropdown-item_logout" href="">Log out</a>
+                                    <a class="dropdown-item dropdown-item_signup" href="./signup.html">Sign up</a>
+                                    <a class="dropdown-item dropdown-item_admin" href="./admin.html">Admin</a>
+                                </div>
                             </li>
-                            <li><a href="">
+
+                            <li class="fav_item"><a href="./wishlist.html">
                                     <i class=" fas fa-regular fa-heart"></i>
+                                    <span class="wishlist_count">
+
+                                    </span>
                                 </a></li>
-                            <li><a href="">
+                            <li class="cart_item"><a href="basket.html">
                                     <i class="fas fa-solid fa-shopping-cart"></i>
+                                    <span class="cart_count">
+
+                                    </span>
                                 </a></li>
                         </ul>
                         <button class="menu-button"><i class="fas fa-bars"></i></button>
@@ -90,23 +103,25 @@
         </div>
         <ul class="navigation">
             <li class="close-icon"><span><i class="fas fa-times fa-2x"></i></span></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Products</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Log in</a></li>
-            <li><a href="">Sign up</a></li>
-            <li><a href="">Log out</a></li>
-            <li><a href="">Favourite</a></li>
-            <li><a href="">Basket</a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li class="dropdown-item_login_mob"><a href="./signin.html">Log in</a></li>
+            <li class="dropdown-item_signup_mob"><a href="./signup.html">Sign up</a></li>
+            <li class="dropdown-item_logout_mob"><a href="">Log out</a></li>
+            <li class="fav_item_mob"><a href="./wishlist.html">Favourite</a></li>
+            <li class="cart_item_mob"><a href="./basket.html">Basket</a></li>
+            <li class="dropdown-item_admin_mob"><a href="./admin.html"></a>Admin</li>
         </ul>
     </header>
     <section class="section13 pb-5 pt-5">
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center pt-5 pb-5 contact-top">
                     <p>Contact Form</p>
-                    <h1>Get In Touch</h1>
+                    <h1 style="display:none" class="my-alert">gonderildi</h1>
                 </div>
             </div>
             <div class="row d-flex justify-content-center ">
@@ -116,27 +131,27 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">First Name</label><br>
-                                <input type="text" name="" id="">
+                                <input type="text" required name="userName" id="">
                             </div>
                             <div class="col-md-6">
                                 <label for="">Last Name</label><br>
-                                <input type="text" name="" id="">
+                                <input type="text" required name="userLastName" id="">
                             </div>
                             <div class="col-md-12">
                                 <label for="">Email</label><br>
-                                <input type="text" name="" id="">
+                                <input type="text" required name="userEmail" id="">
                             </div>
                             <div class="col-md-12">
                                 <label for="">Subject</label><br>
-                                <input type="text">
+                                <input type="text" required name="userSubject">
                             </div>
                             <div class="col-md-12">
                                 <label for="">Message</label><br>
-                                <textarea name="" id="" cols="5" rows="5"
+                                <textarea required name="userMessage" id="" cols="5" rows="5"
                                     placeholder="Write your notes or questions here..."></textarea>
                             </div>
                             <div class="col-md-12">
-                                <input id="send-button" type="button" value="Send Message">
+                                <button id="send-button" >Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -144,6 +159,7 @@
             </div>
         </div>
     </section>
+
     <section class="section14">
         <div class="container">
             <div class="row">
@@ -185,8 +201,9 @@
             </div>
         </div>
     </section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./header.js"></script>
-
+    <script src="./contact.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

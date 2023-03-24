@@ -512,11 +512,12 @@
         </div>
     </section> -->
     <section class="section13 pb-5 pt-5">
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center pt-5 pb-5 contact-top">
                     <p>Contact Form</p>
-                    <h1>Get In Touch</h1>
+                    <h1 style="display:none" class="my-alert">gonderildi</h1>
                 </div>
             </div>
             <div class="row d-flex justify-content-center ">
@@ -526,27 +527,27 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">First Name</label><br>
-                                <input type="text" name="" id="">
+                                <input type="text" required name="userName" id="">
                             </div>
                             <div class="col-md-6">
                                 <label for="">Last Name</label><br>
-                                <input type="text" name="" id="">
+                                <input type="text" required name="userLastName" id="">
                             </div>
                             <div class="col-md-12">
                                 <label for="">Email</label><br>
-                                <input type="text" name="" id="">
+                                <input type="text" required name="userEmail" id="">
                             </div>
                             <div class="col-md-12">
                                 <label for="">Subject</label><br>
-                                <input type="text">
+                                <input type="text" required name="userSubject">
                             </div>
                             <div class="col-md-12">
                                 <label for="">Message</label><br>
-                                <textarea name="" id="" cols="5" rows="5"
+                                <textarea required name="userMessage" id="" cols="5" rows="5"
                                     placeholder="Write your notes or questions here..."></textarea>
                             </div>
                             <div class="col-md-12">
-                                <input id="send-button" type="button" value="Send Message">
+                                <button id="send-button" >Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -597,8 +598,9 @@
             </div>
         </div>
     </section>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./header.js"></script>
+    <script src="./contact.js"></script>
     <script src="product.js"></script>
     <script src="selling.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

@@ -45,6 +45,8 @@
             </form>
         </div>
     </section>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         let signupForm = document.querySelector(".signupForm")
         signupForm.addEventListener("submit", async (e) => {
@@ -68,9 +70,22 @@
                 }),
             })
             let resp = await data.json()
-            console.log(resp);
+            if (data.status == 200) {
+                Swal.fire({
+                    title: '<strong>you are registered</strong>',
+                    icon: 'info',
+                })
+                window.history.back()
+
+            } else {
+                Swal.fire({
+                    title: '<strong>you are not registered</strong>',
+                    icon: 'info',
+                })
+            }
         })
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
