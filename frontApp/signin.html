@@ -42,9 +42,8 @@
             let form = e.target;
             let formEmail = form.email.value
             let formPassword = form.password.value
-            let data = await fetch("http://localhost:8080/api/v1/auth/authenticate", {
+            let data = await fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/api/v1/auth/authenticate", {
                 method: "POST",
-                mode: "cors",
                 headers: {
                     "Content-Type": "application/json",
                 },

@@ -89,7 +89,7 @@ if (localStorage.getItem("token") == null) {
 }
 
 let fetchAllWishlistsForHeader = () => {
-  fetch(`http://localhost:8080/wishlist/${localStorage.getItem("token")}`)
+  fetch(`http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/wishlist/${localStorage.getItem("token")}`)
     .then((data) => data.json())
     .then((wishlists) => {
       // console.log(wishlists.length);
@@ -100,7 +100,7 @@ fetchAllWishlistsForHeader()
 
 
 let fetchAllBasketsForHeader = () => {
-  fetch(`http://localhost:8080/cart/?token=${localStorage.getItem("token")}`)
+  fetch(`http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/cart/?token=${localStorage.getItem("token")}`)
     .then((data) => data.json())
     .then((baskets) => {
       document.querySelector(".cart_count").innerHTML =baskets.cartItemDtoList.length

@@ -1,7 +1,7 @@
 let cardRow = document.querySelector(".card-row")
 let fetchAllWishlists = () => {
     let a = ""
-    fetch(`http://localhost:8080/wishlist/${localStorage.getItem("token")}`)
+    fetch(`http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/wishlist/${localStorage.getItem("token")}`)
         .then((data) => data.json())
         .then((wishlists) => {
             console.log(wishlists);
@@ -21,12 +21,14 @@ let fetchAllWishlists = () => {
                                 <span>
                                         Price: ${wishlist.productPrice}$
                                 </span>
-                                <div class="card-buttons">
+                                <div class="card-buttons d-flex justify-content-center">
+                                <div>
                                     <button class="card-button">
                                         Add to Basket
                                     </button>
-                                    <a data-item=${wishlist.id} href="" class="card-button wishlist-remove_btn d-flex justify-content-center" >Remove from Wishlist</a>
-                                </div>
+                                    <button data-item=${wishlist.id}  class="mt-1 card-button wishlist-remove_btn d-flex justify-content-center" >Remove from Wishlist</button>
+                                    </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -39,7 +41,7 @@ let fetchAllWishlists = () => {
                         let selectedProductId = +e.target.getAttribute("data-item")
                         console.log(selectedProductId);
                         let deleteFromBasket = async () => {
-                            let data = await fetch(`http://localhost:8080/wishlist/delete/${selectedProductId}?token=${localStorage.getItem("token")}`, {
+                            let data = await fetch(`http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/wishlist/delete/${selectedProductId}?token=${localStorage.getItem("token")}`, {
                                 method: "DELETE",
                             })
                         }

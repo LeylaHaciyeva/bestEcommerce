@@ -8,9 +8,8 @@ contactForm.addEventListener("submit", async (e) => {
     let formSub = form.userSubject.value
     let formMessage= form.userMessage.value
 
-    let data = await fetch("http://localhost:8080/contact/post", {
+    let data = await fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/contact/post", {
         method: "POST",
-        mode: "cors",
         headers: {
             "Content-Type": "application/json",
         },

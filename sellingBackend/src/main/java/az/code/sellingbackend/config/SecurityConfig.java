@@ -59,7 +59,7 @@ public class SecurityConfig {
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedHeaders(Arrays.asList("Authorization","Content-Type"));
-        configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500/"));
+        configuration.setAllowedOrigins(Arrays.asList("http://127.0.0.1:5500/","http://selony.s3-website.eu-north-1.amazonaws.com/"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST","DELETE"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);

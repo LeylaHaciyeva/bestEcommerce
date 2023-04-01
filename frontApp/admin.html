@@ -45,7 +45,7 @@
                 <h1 class="text-center"></h1>
                 <section>
                     <div class="container d-flex justify-content-center">
-                        <form class="productForm" method="POST">
+                        <form class="productForm mb-5" method="POST">
                             <div class="form-group">
                                 <label for="productName" class=" col-form-label">Product name</label>
                                 <div class="">
@@ -86,7 +86,7 @@
                 <h1 class="text-center"></h1>
                 <section>
                     <div class="container d-flex justify-content-center">
-                        <form class="categoryForm">
+                        <form class="categoryForm mb-5">
                             <div class="form-group">
                                 <label for="categoryName" class=" col-form-label">Category name</label>
                                 <div class="">
@@ -123,7 +123,7 @@
         let categorySelected = document.querySelector("#categorySelected")
         let optionCat
         let fetchAllCategories = () => {
-            fetch("http://localhost:8080/category/all")
+            fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/category/all")
                 .then((data) => data.json())
                 .then((categories) => {
                     categories.map((category) => {
@@ -143,9 +143,8 @@
             let productImage = e.target.productImage.value
             let productDesc = e.target.productDesc.value
             let productPrice = e.target.productPrice.value
-            let data = await fetch("http://localhost:8080/api/createProduct", {
+            let data = await fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/api/createProduct", {
                 method: "POST",
-                mode: "cors",
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -178,9 +177,8 @@
             let name = e.target.name.value
             let desc = e.target.desc.value
             let url = e.target.url.value
-            let data = await fetch("http://localhost:8080/category/create", {
+            let data = await fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/category/create", {
                 method: "POST",
-                mode: "cors",
                 headers: {
                     "Content-Type": "application/json",
                 },

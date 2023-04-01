@@ -40,7 +40,7 @@
 
         let fetchAllCategories = () => {
             let a = ""
-            fetch("http://localhost:8080/category/all")
+            fetch("http://selony-env.eba-te9jpvdm.eu-north-1.elasticbeanstalk.com/category/all")
                 .then((data) => data.json())
                 .then((categories) => {
                     categories.map((category) => {
